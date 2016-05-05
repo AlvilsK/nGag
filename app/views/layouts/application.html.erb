@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="eng-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>nGag</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your keywords">
+    <meta name="author" content="Your name">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="body">
+      <%= render 'shared/navbar' %>
+      <div class="container">
+        <% if notice %><div class="alert alert-success"><%= notice %></div><% end %>
+        <% if alert %><div class="alert alert-danger"><%= alert %></div><% end %>
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

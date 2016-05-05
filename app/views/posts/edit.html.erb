@@ -1,0 +1,13 @@
+<div class="form-horizontal custom">
+  <fieldset>
+    <legend>Edit your post!</legend>
+      <div class="form-inputs">
+      <%= simple_form_for @post, :html => { :multipart => true } do |f| %>
+      <%= f.input :title %>
+      <%= f.input :description %>
+      <%= f.input :post_img, as: :file %>
+      <%= f.button :submit, class: "form-actions" %>
+      <% end %>
+    </div>
+  </fieldset>
+</div>
